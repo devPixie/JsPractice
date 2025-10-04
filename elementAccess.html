@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <input type="text" id="textbox" value="hello">
+        <button onclick="show()">showvalue</button>
+    </div>
+    <div>
+        <select name="apple" id="apple">
+            <option id="apple">apple</option>
+        </select>
+    </div>
+    <div>
+          <label>
+    <input type="radio" name="gender" value="Male"
+           onchange="console.log(document.getElementsByName('gender')[0].value)">
+    Male
+  </label>
+
+  <label>
+    <input type="radio" name="gender" value="Female"
+           onchange="console.log(document.getElementsByName('gender')[1].value)">
+    Female
+  </label>
+    </div>
+
+    <div>
+ <select class="sports" name="crick" id="crick">
+   <option class="sports"  value="cricket">cricket</option>
+ </select>
+</div>
+
+<span id="message"> priyanka </span>
+
+    <script>
+        // Task 1
+        // Create a dropdown with some options of fruits
+        // Read selected fruit store it in a variable and print value in console.
+
+        var valuoff = document.getElementById("apple").innerText;
+        console.log("valuoff", valuoff)
+
+        // Task 2
+        // Create a one textbox and provide value and id to it.
+        // Give the by default value to that textbox
+        // Read the value of the textbox by using getElementById and display value in alert box.
+
+        function show() {
+            var tValue = document.getElementById('textbox').value;
+            alert("textvalue is:" + tValue)
+        }
+
+//         Task 3
+// Create 2 radio buttons with same name ="gender" value will be Male & female
+// Read selected value and print it in console.
+// Try in to write it in console directly rather than in script section
+
+// Task 4
+// Create a one dropdown for sports and create one textbox.
+// Give default values for both.
+// Give same class name for dropdown and textbox.
+// And First stored the dropdown selected value in console and textbox value in alert.
+
+
+var sport = document.getElementsByClassName('sports')[0].value
+console.log("sports", sport)
+var cricket =  document.getElementsByClassName('sports')[1].value
+alert("crick-----", cricket)
+
+
+// Task 5
+// Create a one span and provide id.
+// Write the anything under the span
+// Read the value of the span by using getElementById and display that in confirm popup.
+
+var messages = document.getElementById('message').innerHTML
+confirm(messages)
+
+    </script>
+</body>
+
+</html>

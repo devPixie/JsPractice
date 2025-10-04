@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="employee" id="employee" onchange="onselectEmp()">
+ <option value="sam">sam</option>
+ <option value="kk">kk</option>
+ <option value="ram">ram</option>
+ <option value="Radha">Radha</option>
+</select>
+    <script>
+    // Task 1
+// Create a Object to store Product information.
+// Fields will be ProductName, Category, Price, Discount
+// Print ProductName & Price in the console.
+var product = {
+productName: "Headphone",
+category: "Electronics",
+price: 600,
+discount: "10%"
+};
+console.log(product.productName);
+console.log(product.price);
+// Task 2
+// Create a Object to store Train Ticket information
+// Fields will be TrainName, TrainNo, NoOfPassinger, From, To, DateOfJourney
+// Print whole Information in
+// the p tag like below
+// ➡️ Traine Name: Vidarbah Express
+// ➡️ Traine No: 12135
+// ➡️ No Of Passinger : 3
+// ➡️ From Location: Nagpur
+// ➡️ To Location: Mumbai
+// ➡️ Date Of Journey:
+// 08-04-2023 05.00 PM
+let ticketInfo = {
+trainName : "Vidarbah Express",
+trainNo: "12135",
+noOfPassenger: 4,
+from: "Jalaon",
+to: "Nagpur",
+dateOfJourney: "08-04-2023 05.00 PM"
+}
+console.log("Traine Name:", ticketInfo.trainName)
+console.log("Traine No:", ticketInfo.trainNo)
+console.log("Passanger:", ticketInfo.noOfPassenger)
+console.log("from:", ticketInfo.from)
+console.log("to:", ticketInfo.to)
+console.log("date:", ticketInfo.dateOfJourney)
+// Task 3
+// Create one Object to Hold Information of School.
+// Fields will be SchoolName, PrincipleName, ContactNo, and Address.
+// Print whole Object in console
+// after that add one more Field SchoolEmail with some email.
+// Again print updated object.
+let schoolInfo = {
+ schoolName: "KV",
+ principalName: "Thankre",
+ coNo: "9812981298",
+ address: "Ring Road, Pune"
+}
+console.log(schoolInfo);
+schoolInfo.email = "school@kv.com";
+console.log(schoolInfo)
+// Task 4
+// Create one Object to Hold SupportTicket data
+// Properties will be TicketNo, CreatedBy, CreatedDate, AssigntoEmployeeName,
+// TicketDescription.
+// Keep AssigntoEmployeeName filed with empty value.
+// Print a dropdown with Employee Name.
+// ON Assign Button add selected employee name to AssigntoEmployeeName.
+// Print Whole Object after assigning employee in Console.
+let ticketData = {
+ tNo: "12345",
+ createdBy: "priya",
+ createdDate: "12 sept 2025",
+ assignToemp: "",
+ ticketDescription: "Request to install VS code"
+}
+function onselectEmp(){
+ticketData.assignToemp = ""
+ticketData.assignToemp = document.getElementById('employee').value
+console.log(ticketData)
+}
+
+
+
+</script>
+</body>
+</html>

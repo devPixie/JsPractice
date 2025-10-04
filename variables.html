@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("Script 1 is loaded")
+    </script>
+</head>
+
+<body>
+    <h1>Variables Task</h1>
+    <script>
+
+        // Task 1
+        // task 1create 3 variables to store firstName, middleName, lastName and Generate fullName by joining 3 variable and print full name in console.
+        // create variables to store student details like name, contactNo, FatherName, MotherName, Class,RollNo and print it in console
+        // create variable to store address, city ,state and pincode- and print address and city in console
+
+
+        var firstName = "vrinda";
+        var middleName = "Kalpesh";
+        var lastName = "Patil";
+
+        function fullName(a, b, c) {
+            var name = a + ' ' + b + ' ' + c;
+            console.log("fullname:", name)
+        }
+
+        fullName(firstName, middleName, lastName);
+
+        var name = "sagar";
+        var contactNo = 8123567987;
+        var fatherName = "Ghanshyam";
+        var motherName = "Rekha";
+        var className = "A div";
+        var rollNo = 45;
+
+        function printVars(a) {
+            console.log(a);
+        }
+
+        printVars(name);
+        printVars(contactNo);
+        printVars(fatherName);
+        printVars(motherName);
+        printVars(className);
+        printVars(rollNo);
+
+        var address = "khote nagar Jalgaon";
+        var city = "Jalgaon";
+        var state = "Maharashtra";
+        var pincode = 425001;
+
+        printVars(address);
+        printVars(city);
+        printVars(state);
+        printVars(pincode);
+
+        // Task 2
+        // create currentDate variable and store current Date into it and show that in alert popup
+        // create variables to store patient data - name, age, address, contactNo and print name & age in console
+
+        const currentDate = new Date();
+        console.log(currentDate)
+        alert("Todays Date:", currentDate);
+
+    </script>
+
+    <!-- task 3 create 2 script tag in html page- 1st will be in head part- 2nd will be in body part at the end
+in first script tag show alert as script 1 loaded
+in 2nd script tag show alert as script 2 loaded -->
+
+    <script>
+        alert("Script 2 is loaded")
+
+        // Task 4
+        // Create 2 variable num1 assign value = 1122, num2 == 3344
+        // show both varible in alert popup
+        // after alert now replace value of num1 with num2 & num2 with num1
+        // now show updated value in alert again
+
+        var num1 = 1122;
+        var num2 = 3344;
+        alert("num1:", num1 , "num2:", num2)
+ 
+//advance 1 Create a boolean Variable Store some value in it
+// if value is true print "Value is Success" if false print "Value is Danger"
+
+     var isSuccess = true;
+     
+    if(isSuccess == true){
+        console.log("value is success")
+    } else {
+        console.log("value is in danger");
+    }
+    
+// advance 2 Task 2
+// Create 2 variable to store first, middle & last name
+// Create a button => Get First Charactors
+// On click - get First charactors of all the variable and Join them with " - " and Print it in console
+// Ex. Sachin Ramesh Tendulkar => C-R-T
+
+   var first = "sachin";
+   var middle = "Ramesh";
+   var last = "tendulakar";
+
+//    function getFirstChar(a,b,c) {
+//     var result = document.getElementById.name.charAt(0);
+//     console.log("result", result)
+//    }
+
+    </script>
+<button onclick="getFirstChar()" id="name">Get Initials</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="buttonclicked()"> click me</button>
+<input type="text" placeholder="num1" id="num1" onchange="multiplication()">
+<input type="text" placeholder="num2" id="num2" onchange="multiplication()">
+<input type="text" placeholder="multi" id="result" >
+<input type="text" placeholder="write somethin" id="text" onkeydown="textEvent()">
+
+   <script>
+//      Task 1 (Click Event)
+// Create on button Click Me. 
+// On the click on button showcase alert with text Hello Javascript
+
+function buttonclicked() {
+ var message = 'button clicked';
+ alert(message)
+}
+
+// Task 2 (onblur Event or onchange)
+// Take three textboxes.
+// Do multiplication of textbox 1 and 2 and store the result in textbox 3.
+
+function multiplication() {
+ debugger;
+ var num1 = document.getElementById('num1').value;
+ var num2 = document.getElementById('num2').value;
+ var multi = num1 * num2;
+ document.getElementById('result').value = multi;
+}
+
+
+// Task 3 (Keydown Event)
+// Take a one textbox and apply Keydown event in that textbox
+// On the click on textbox you have to showcase alert box and show the message (You have pressed a key inside text input!)
+
+function textEvent(){
+ var textinside = document.getElementById('text').value;
+ alert(textinside)
+}
+
+
+
+   </script>
+   
+</body>
+</html>

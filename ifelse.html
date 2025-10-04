@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even or Odd Checker</title>
+</head>
+<body>
+  <h3>Even / Odd Checker</h3>
+
+  <!-- Input textbox -->
+  <input type="number" id="numInput" placeholder="Enter a number">
+
+  <!-- Button -->
+  <button onclick="checkNumber()">Check</button>
+
+  <!-- Strong tag for result -->
+  <strong id="result"></strong>
+<input type="text" id="num1" placeholder="put number 1st here">
+<input type="text" id="num2" placeholder="put number 2nd here">
+<input type="text" id="num3" placeholder="put number 3rd here">
+<button onclick="getMaxNum()">get max number</button>
+<p id="result"></p>
+<!-- Dropdown -->
+ <label for="caste">Select Caste:</label>
+ <select id="caste" onchange="toggleTextbox()">
+   <option value="General">General</option>
+   <option value="OBC">OBC</option>
+   <option value="SC">SC</option>
+   <option value="ST">ST</option>
+   <option value="Other">Other</option>
+ </select>
+ <!-- Hidden textbox for "Other" -->
+ <input type="text" id="otherCasteBox" placeholder="Enter your caste" />
+  <script>
+
+    // create a texbox to Enter number
+// create Button with name check -
+// on btn click check if Entered no is even or odd
+// Display result in strong tag beside button
+
+    function checkNumber() {
+      // Get value from textbox
+      const num = document.getElementById("numInput").value;
+
+      // Check if input is valid
+      if (num === "") {
+        document.getElementById("result").innerText = " Please enter a number!";
+        return;
+      }
+
+      // Check even or odd
+      if (num % 2 === 0) {
+        document.getElementById("result").innerText = " Even Number";
+      } else {
+        document.getElementById("result").innerText = " Odd Number";
+      }
+    }
+
+    // Task 2
+// Create 3 textbox to provide integer values
+// cerate a button - check max number
+// on click of button - find max numbers and print it in p tag
+function getMaxNum() {
+ var num1 = parseInt(document.getElementById("num1").value)
+ var num2 = parseInt(document.getElementById("num2").value)
+ var num3 = parseInt(document.getElementById("num3").value)
+ if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+   document.getElementById("result").innerText = "please put a valid number"
+   return
+ }
+ if (num1 > num2 && num1 > num3) {
+   document.getElementById("result").innerText = `max number is ${num1}`;
+ } else if (num2 > num1 && num2 > num3) {
+   document.getElementById("result").innerText = `max number is ${num2}`;
+ } else {
+   document.getElementById("result").innerText = `max number is ${num3}`;
+ }
+}
+// Task 3
+// Create 1 dropdown with Caste Options and One Other Option
+// On dropdown Change if Other is selected show other textbox else hide
+function toggleTextbox() {
+     let dropdown = document.getElementById("caste");
+     let textbox = document.getElementById("otherCasteBox");
+     if (dropdown.value === "Other") {
+       textbox.style.display = "inline";  // show textbox
+     } else {
+       textbox.style.display = "none";    // hide textbox
+     }
+   }
+
+
+
+  </script>
+</body>
+</html>
